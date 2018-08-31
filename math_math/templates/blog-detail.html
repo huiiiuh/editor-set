@@ -1,0 +1,28 @@
+{#templates/blog-detail.html#}
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}blog detail{% endblock %}
+
+
+
+{% block content %}
+    <section>
+        <div class="wp">
+            <div class="list groupPurchase_detail_pro">
+                <div class="left layout">
+                    <div class="head">
+                        <ul class="tab_header">
+                            <li class="active">blog详情</li>
+                        </ul>
+                    </div>
+                    <div class="tab_cont tab_cont1">
+                        {% autoescape off %}
+                        {{ blog.content_ueditor }}
+                        {% endautoescape %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
